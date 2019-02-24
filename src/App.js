@@ -10,15 +10,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Hover
-          render={hovering => <Info hovering={hovering} height="16" id="250" />}
-        />
-        <Hover
-          render={hovering => <TrendChart hovering={hovering} id={110} />}
-        />
-        <Hover
-          render={hovering => <DailyChart hovering={hovering} id={128} />}
-        />
+        <Hover>
+          {hovering => <Info hovering={hovering} height="16" id="250" />}
+        </Hover>
+        <Hover>{hovering => <TrendChart hovering={hovering} id={110} />}</Hover>
+        <Hover>{hovering => <DailyChart hovering={hovering} id={128} />}</Hover>
       </div>
     )
   }
